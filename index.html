@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>DETECHTIVE - Detect COVID-19 with Informative Technology</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark position-fixed w-100 p-4 bg-transparent">
+      <a href="#" class="mr-4">
+        <img src="assets/images/logo.png" height="80" class="d-inline-block align-top" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>    
+      <div class="ml-4 collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#status">Status Lokasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#info">Info Sekitar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#riwayat">Riwayat Lokasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontak">Riwayat Kontak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tips">Tips</a>
+          </li>
+        </ul>
+        <button class="btn btn-daftar mr-3 px-4 py-1" type="submit">Daftar</button>
+        <button class="btn btn-masuk ml-3 px-4 py-1" type="submit">Masuk</button>
+      </div>
+    </nav>
+    <div id="home">
+      <div style="position: absolute; top: 0; left: 0; width: 100%;">
+        <svg
+          xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:cc="http://creativecommons.org/ns#"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+          viewBox="0 0 1366 562.13501"
+          version="1.1"
+          id="svg4"
+          sodipodi:docname="wave.svg"
+          inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+          width="100%">
+          <metadata
+            id="metadata10">
+            <rdf:RDF>
+              <cc:Work
+                rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type
+                  rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:title></dc:title>
+              </cc:Work>
+            </rdf:RDF>
+          </metadata>
+          <defs
+            id="defs8">
+            <linearGradient
+              inkscape:collect="always"
+              id="linearGradient4633">
+              <stop
+                style="stop-color:#2e5c96;stop-opacity:1;"
+                offset="0"
+                id="stop4629" />
+              <stop
+                style="stop-color:#295387;stop-opacity:1"
+                offset="1"
+                id="stop4631" />
+            </linearGradient>
+            <linearGradient
+              inkscape:collect="always"
+              id="linearGradient4620">
+              <stop
+                style="stop-color:#2a5286;stop-opacity:1"
+                offset="0"
+                id="stop4616" />
+              <stop
+                style="stop-color:#264976;stop-opacity:1"
+                offset="1"
+                id="stop4618" />
+            </linearGradient>
+            <linearGradient
+              inkscape:collect="always"
+              id="linearGradient4601">
+              <stop
+                style="stop-color:#264876;stop-opacity:1"
+                offset="0"
+                id="stop4597" />
+              <stop
+                style="stop-color:#213f67;stop-opacity:1"
+                offset="1"
+                id="stop4599" />
+            </linearGradient>
+            <linearGradient
+              inkscape:collect="always"
+              id="linearGradient4570">
+              <stop
+                style="stop-color:#213f67;stop-opacity:1"
+                offset="0"
+                id="stop4566" />
+              <stop
+                style="stop-color:#1d3557;stop-opacity:1"
+                offset="1"
+                id="stop4568" />
+            </linearGradient>
+            <linearGradient
+              inkscape:collect="always"
+              xlink:href="#linearGradient4570"
+              id="linearGradient4574"
+              x1="3947.5115"
+              y1="-1166.9017"
+              x2="3991.4209"
+              y2="-946.13513"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="matrix(1.044422,-0.16152653,0.16152653,1.044422,-49.95281,703.72307)" />
+            <linearGradient
+              inkscape:collect="always"
+              xlink:href="#linearGradient4601"
+              id="linearGradient4603"
+              x1="3967.5811"
+              y1="-1112.9933"
+              x2="3978.8774"
+              y2="-990.06659"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="matrix(1.044422,-0.16152653,0.16152653,1.044422,-49.95281,703.72307)" />
+            <linearGradient
+              inkscape:collect="always"
+              xlink:href="#linearGradient4620"
+              id="linearGradient4622"
+              x1="3919.9158"
+              y1="-1022.0515"
+              x2="3926.1943"
+              y2="-899.12463"
+              gradientUnits="userSpaceOnUse" />
+            <linearGradient
+              inkscape:collect="always"
+              xlink:href="#linearGradient4633"
+              id="linearGradient4635"
+              x1="3953.2473"
+              y1="-952.44458"
+              x2="3956.8718"
+              y2="-789.24335"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="matrix(1.044422,-0.16152653,0.16152653,1.044422,-49.95281,703.72307)" />
+            <linearGradient
+              inkscape:collect="always"
+              xlink:href="#linearGradient4620"
+              id="linearGradient4665"
+              gradientUnits="userSpaceOnUse"
+              x1="3919.9158"
+              y1="-1022.0515"
+              x2="3926.1943"
+              y2="-899.12463"
+              gradientTransform="matrix(1.044422,-0.16152653,0.16152653,1.044422,-49.95281,703.72307)" />
+          </defs>
+          <sodipodi:namedview
+            pagecolor="#ffffff"
+            bordercolor="#666666"
+            borderopacity="1"
+            objecttolerance="10"
+            gridtolerance="10"
+            guidetolerance="10"
+            inkscape:pageopacity="0"
+            inkscape:pageshadow="2"
+            inkscape:window-width="1366"
+            inkscape:window-height="705"
+            id="namedview6"
+            showgrid="false"
+            inkscape:zoom="0.044194174"
+            inkscape:cx="2763.426"
+            inkscape:cy="-993.73154"
+            inkscape:window-x="-8"
+            inkscape:window-y="-8"
+            inkscape:window-maximized="1"
+            inkscape:current-layer="svg4" />
+          <g
+            id="g845"
+            transform="translate(-3239.9062,1336.1387)">
+            <path
+              inkscape:export-ydpi="96"
+              inkscape:export-xdpi="96"
+              id="rect4695"
+              d="m 3239.9062,-1336.1387 v 211.2598 62.9316 271.69339 c 134.4141,-2.09485 253.4609,25.56565 374.3086,12.93164 167.9598,-23.43407 321.8537,-89.19406 487.211,-118.9707 31.9443,-5.83535 64.3725,-10.32671 97.2031,-13.71094 19.6985,-2.03054 39.5407,-3.65956 59.5078,-4.94531 113.0802,-7.28157 230.1606,-3.44196 347.7695,2.14063 v -149.13871 -274.1914 z"
+              style="opacity:1;fill:#1d3557;fill-opacity:1;stroke:none;stroke-width:12.33536911;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+              inkscape:connector-curvature="0" />
+            <path
+              inkscape:export-ydpi="96"
+              inkscape:export-xdpi="96"
+              id="path2"
+              d="m 4385.9414,-1336.1387 -30.6719,38.7617 c -29.8799,31.0848 -72.522,70.2816 -121.4746,92.5528 -65.1658,29.4524 -141.2831,28.833 -215.8437,30.457 -75.4645,2.199 -149.8605,7.4613 -211.42,46.2832 -62.3294,38.8317 -112.2138,112.008 -176.9785,144.82033 -64.0529,32.9525 -142.4924,25.36902 -215.7363,33.92187 -61.9047,6.84714 -120.4415,25.17497 -173.9102,56.49805 v 102.58984 c 105.011,-1.6366 200.6416,14.88841 295.0801,16.17188 7e-4,10e-6 0,-10e-6 0,0 26.4421,0.3593 52.7918,-0.47661 79.2265,-3.24024 167.9598,-23.43407 321.8536,-89.19405 487.211,-118.9707 31.9443,-5.83534 64.3725,-10.32671 97.2031,-13.71094 19.6985,-2.03053 39.5407,-3.65956 59.5078,-4.94531 113.0802,-7.28157 230.1605,-3.44196 347.7695,2.14063 v -149.13871 -274.1914 z"
+              style="fill:url(#linearGradient4574);fill-opacity:1;stroke-width:0.79884595"
+              inkscape:connector-curvature="0" />
+            <path
+              inkscape:export-ydpi="96"
+              inkscape:export-xdpi="96"
+              id="path4556"
+              d="m 4605.9062,-1201.252 c -37.4243,22.5672 -81.1423,44.9585 -127.9082,60.0645 -95.0304,30.5065 -202.1042,30.8164 -307.2402,33.3691 -106.4726,3.1438 -211.7854,9.3627 -302.789,49.2754 -92.089,39.9323 -170.5073,114.35553 -265.3497,148.24612 -93.8558,34.0232 -203.4215,27.33414 -307.4804,36.85938 -11.6391,1.01496 -33.3425,10.68117 -55.2325,24.35547 v 58.82812 c 134.414,-2.09485 253.4609,25.56565 374.3086,12.93164 167.9598,-23.43407 321.8536,-89.19405 487.211,-118.9707 31.9443,-5.83534 64.3725,-10.32671 97.2031,-13.71094 19.6985,-2.03053 39.5407,-3.65956 59.5078,-4.94531 113.0802,-7.28157 230.1605,-3.44196 347.7695,2.14063 z"
+              style="fill:url(#linearGradient4603);fill-opacity:1;stroke-width:0.95140994"
+              inkscape:connector-curvature="0" />
+            <path
+              inkscape:export-ydpi="96"
+              inkscape:export-xdpi="96"
+              id="path4595"
+              d="m 4605.9062,-1078.8652 c -22.9574,9.0165 -47.0057,17.0809 -71.705,23.375 -103.0764,26.0799 -216.7639,21.3745 -328.5567,19.0058 -75.429,-1.2256 -150.412,-1.0615 -221.4726,9.7266 -2.2923,0.3479 -4.5794,0.7076 -6.8633,1.0781 -33.2219,5.3879 -65.5555,13.1812 -96.6426,24.332 -100.6323,35.65082 -189.2331,106.45804 -292.3535,135.93364 -102.0827,29.65454 -217.9153,17.8307 -329.0664,22.49023 -4.8996,0.18554 -11.5851,1.67018 -19.3399,4.14649 v 48.52343 c 134.414,-2.09485 253.4609,25.56565 374.3086,12.93164 167.9598,-23.43407 321.8536,-89.19405 487.211,-118.9707 31.9443,-5.83534 64.3725,-10.32671 97.2031,-13.71094 19.6985,-2.03053 39.5407,-3.65956 59.5078,-4.94531 113.0802,-7.28157 230.1605,-3.44196 347.7695,2.14063 z"
+              style="fill:url(#linearGradient4665);fill-opacity:1;stroke-width:0.98219991"
+              inkscape:connector-curvature="0" />
+            <path
+              inkscape:export-ydpi="96"
+              inkscape:export-xdpi="96"
+              id="path4608"
+              d="m 4256.2715,-971.72461 c -54.9099,-0.06 -109.1436,1.77864 -162.0176,7.34766 -16.0223,1.68758 -31.9185,3.71697 -47.6719,6.14062 -26.2559,4.03944 -52.1113,9.17093 -77.4804,15.63281 -131.3513,33.02165 -250.9333,101.63686 -384.8282,128.39649 -108.7997,16.93922 -219.3247,-17.04285 -344.3672,-1.86133 v 25.81445 c 134.414,-2.09485 253.4609,25.56565 374.3086,12.93164 167.9598,-23.43407 321.8536,-89.19406 487.211,-118.9707 31.9443,-5.83535 64.3725,-10.32671 97.2031,-13.71094 19.6985,-2.03054 39.5407,-3.65956 59.5078,-4.94531 113.0802,-7.28157 230.1605,-3.44196 347.7695,2.14063 v -50.52735 c -72.9506,0.58671 -147.0683,-2.85242 -220.6054,-5.66406 -43.2042,-1.48244 -86.3216,-2.67793 -129.0293,-2.72461 z"
+              style="fill:url(#linearGradient4635);fill-opacity:1;stroke-width:1.10973418"
+              inkscape:connector-curvature="0" />
+          </g>
+        </svg>
+      </div>
+      <div class="header-content">
+        <div class="row mx-0">
+          <div class="col-md-5">
+            <h1 class="bold white">DETECHTIVE</h1>
+            <p class="white font-24">"Detect COVID-19 with Informative Technology"</p>
+            <p class="white font-20 text-justify">Website Informatif yang memberikan segala informasi tentang COVID-19 di daerah sekitar dan memberikan tips mencegah tertular COVID-19. Ayo, sayangi diri kita dengan tambah pengetahuan tentang COVID-19 di “Detechtive”!</p>
+            <button class="btn btn-selengkapnya mt-5 px-5 py-2" type="submit">Selengkapnya</button>
+          </div>
+          <div class="offset-md-3 col-md-4">
+            <img src="assets/images/home.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="status">
+      <p class="bold dark-blue font-24">Halo, Muhammad Alfian Ma'ruf<span class="badge white bg-green ml-3">Bebas COVID-19</span></p>
+      <div class="lokasi bg-white py-2 px-3 d-inline-block"><p class="dark-blue font-20 mb-0"><img src="assets/images/map-marker.png" width="25" class="mr-2 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">23.59 WIB, Kelurahan Wiyung, Kec.Wiyung, Surabaya</p></div>
+      <h2 class="bold dark-blue text-center mt-5 mb-4">Lokasi Anda Saat Ini</h2>
+      <div class="row">
+        <div class="col-md-5">
+          <div id="mapid"></div>
+        </div>
+        <div class="col-md-7">
+          <div class="ml-4 bg-green p-4 w-100 lokasi-container">
+            <div class="row">
+              <div class="col-md-7">
+                <p class="bold white font-22">Anda berada di zona hijau</p>
+                <p class="white text-justify lh-2 font-16">Berdasarkan data Pemerintah Kota Surabayakelurahan Wiyung, kecamatan Wiyung dinyatakan sebagai zona hijau.</p>
+                <p class="white text-justify lh-2 font-16 mb-0">Tetap jaga jarak dan jaga kesehatan serta patuhi protokol kesehatan.</p>
+              </div>
+              <div class="col-md-5 px-4 my-auto">
+                <img src="assets/images/map.png" class="my-auto img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="info">
+      <div style="position: absolute; bottom: 0; left: 0; width: 100%;">
+        <svg
+          xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:cc="http://creativecommons.org/ns#"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+          viewBox="0 0 1366 298.66199"
+          version="1.1"
+          id="svg4"
+          sodipodi:docname="bg.svg"
+          inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+          <metadata
+            id="metadata10">
+            <rdf:RDF>
+              <cc:Work
+                rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type
+                  rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:title></dc:title>
+              </cc:Work>
+            </rdf:RDF>
+          </metadata>
+          <defs
+            id="defs8">
+            <linearGradient
+              inkscape:collect="always"
+              id="linearGradient4620">
+              <stop
+                style="stop-color:#2a5286;stop-opacity:1"
+                offset="0"
+                id="stop4616" />
+              <stop
+                style="stop-color:#264976;stop-opacity:1"
+                offset="1"
+                id="stop4618" />
+            </linearGradient>
+            <linearGradient
+              inkscape:collect="always"
+              xlink:href="#linearGradient4620"
+              id="linearGradient4622"
+              x1="3919.9158"
+              y1="-1022.0515"
+              x2="3926.1943"
+              y2="-899.12463"
+              gradientUnits="userSpaceOnUse" />
+          </defs>
+          <sodipodi:namedview
+            pagecolor="#ffffff"
+            bordercolor="#666666"
+            borderopacity="1"
+            objecttolerance="10"
+            gridtolerance="10"
+            guidetolerance="10"
+            inkscape:pageopacity="0"
+            inkscape:pageshadow="2"
+            inkscape:window-width="1366"
+            inkscape:window-height="705"
+            id="namedview6"
+            showgrid="false"
+            inkscape:zoom="0.35355339"
+            inkscape:cx="373.35416"
+            inkscape:cy="-184.18863"
+            inkscape:window-x="-8"
+            inkscape:window-y="-8"
+            inkscape:window-maximized="1"
+            inkscape:current-layer="g845" />
+          <g
+            id="g845"
+            transform="translate(-3239.9062,1072.6657)">
+            <path
+              style="fill:#a8dadc;fill-opacity:1;stroke-width:1.02006936"
+              d="m 4391.6757,-1072.6638 c -45.3961,0.1327 -87.9897,7.6663 -126.0312,22.4551 -45.109,17.5363 -81.9466,39.4269 -180.2442,107.1093 -77.2312,53.1772 -117.21,76.19141 -160.6035,92.45313 -14.4323,5.40853 -39.0316,12.16703 -53.9179,14.8125 -54.8668,9.7506 -112.4715,6.05478 -182.8262,-11.72656 -81.1792,-20.51717 -215.6187,-72.06382 -413.4043,-158.50777 -18.5919,-8.1258 -27.1009,-11.8362 -34.7422,-15.168 v 247.23241 h 683 683 v -257.11521 l -25.0586,-7.291 c -57.9511,-16.8597 -84.3032,-23.3113 -115.7793,-28.3496 -25.0667,-4.0123 -49.6136,-5.9738 -73.3926,-5.9043 z"
+              id="path850"
+              inkscape:connector-curvature="0" />
+          </g>
+        </svg>
+      </div>
+      <h2 class="bold dark-blue text-right mt-5 mb-4">Info Sekitar</h2>
+      <ul class="tabs" role="tablist">
+        <li>
+            <input type="radio" name="tabs" id="tab1" checked />
+            <label for="tab1" 
+                   role="tab" 
+                   aria-selected="true" 
+                   aria-controls="panel1" 
+                   tabindex="0">RS & Apotek</label>
+            <div id="tab-content1" 
+                 class="tab-content" 
+                 role="tabpanel" 
+                 aria-labelledby="description" 
+                 aria-hidden="false">
+                 <div class="mx-md-5 my-4 content-tab">
+                  <p class="dark-blue font-22">Apotek Immanuel<span class="float-right font-16 medium">50 Meter</span></p>
+                </div>
+                <div class="mx-md-5 my-4 content-tab">
+                  <p class="dark-blue font-22">Rumah Sakit Wijaya<span class="float-right font-16 medium">200 Meter</span></p>
+                </div>
+                <div class="mx-md-5 mt-4 content-tab">
+                  <p class="dark-blue font-22">RS Wiyung Sejahtera<span class="float-right font-16 medium">1 Kilometer</span></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="tabs" id="tab2" />
+            <label for="tab2"
+                   role="tab" 
+                   aria-selected="false" 
+                   aria-controls="panel2" 
+                   tabindex="0">Area Berdampak</label>
+            <div id="tab-content2" 
+                 class="tab-content"
+                 role="tabpanel" 
+                 aria-labelledby="specification" 
+                 aria-hidden="true">
+              <div class="mx-md-5 my-4 content-tab">
+                <p class="dark-blue font-22">Kel. Wiyung<span class="badge white bg-green ml-3 float-right px-3 py-2">Zona Hijau</span></p>
+              </div>
+              <div class="mx-md-5 my-4 content-tab">
+                <p class="dark-blue font-22">Kel. Jajar Tunggal<span class="badge white bg-green ml-3 float-right px-3 py-2">Zona Hijau</span></p>
+              </div>
+              <div class="mx-md-5 mt-4 content-tab">
+                <p class="dark-blue font-22">Kel. Babatan<span class="badge white bg-green ml-3 float-right px-3 py-2">Zona Hijau</span></p>
+              </div>
+            </div>
+        </li>
+      </ul>
+      <br style="clear: both;" />
+    </div>
+    <div id="riwayat">
+      <h2 class="bold dark-blue text-left pt-5">Riwayat Lokasi</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <input type="date" class="input-date" name="" id="">
+          <img src="assets/images/riwayat.png" class="pt-5 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div class="col-md-8">
+          <div class="p-4 riwayat-container">
+            <p class="font-22 dark-blue">02 November 2020</p>
+            <div class="row mt-3">
+              <div class="col-1">
+                <img src="assets/images/map-marker.png" width="25" class="mr-2 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+              </div>
+              <div class="col-11">
+                <p class="font-22 dark-blue">Royal Plaza<span class="float-right">10.00 - 12.00</span></p>
+                <p class="font-18 dark-blue">Jl.Ahmad Yani No.16-18</p>
+                <div class="row">
+                  <div class="col-3">
+                    <div class="royal-1">
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="royal-2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-1">
+                <img src="assets/images/map-marker.png" width="25" class="mr-2 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+              </div>
+              <div class="col-11">
+                <p class="font-22 dark-blue">Royal Plaza<span class="float-right">10.00 - 12.00</span></p>
+                <p class="font-18 dark-blue">Jl.Ahmad Yani No.16-18</p>
+                <div class="row">
+                  <div class="col-3">
+                    <div class="royal-1">
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="royal-2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="kontak">
+      <div style="position: absolute; bottom: 0; left: 0; width: 100%;">
+        <svg
+          xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:cc="http://creativecommons.org/ns#"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+          viewBox="0 0 1366 344.04901"
+          version="1.1"
+          id="svg4"
+          sodipodi:docname="bg2.svg"
+          inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+          <metadata
+            id="metadata10">
+            <rdf:RDF>
+              <cc:Work
+                rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type
+                  rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:title />
+              </cc:Work>
+            </rdf:RDF>
+          </metadata>
+          <defs
+            id="defs8">
+            <linearGradient
+              inkscape:collect="always"
+              id="linearGradient4620">
+              <stop
+                style="stop-color:#2a5286;stop-opacity:1"
+                offset="0"
+                id="stop4616" />
+              <stop
+                style="stop-color:#264976;stop-opacity:1"
+                offset="1"
+                id="stop4618" />
+            </linearGradient>
+            <linearGradient
+              inkscape:collect="always"
+              xlink:href="#linearGradient4620"
+              id="linearGradient4622"
+              x1="3919.9158"
+              y1="-1022.0515"
+              x2="3926.1943"
+              y2="-899.12463"
+              gradientUnits="userSpaceOnUse" />
+          </defs>
+          <sodipodi:namedview
+            pagecolor="#ffffff"
+            bordercolor="#666666"
+            borderopacity="1"
+            objecttolerance="10"
+            gridtolerance="10"
+            guidetolerance="10"
+            inkscape:pageopacity="0"
+            inkscape:pageshadow="2"
+            inkscape:window-width="1366"
+            inkscape:window-height="705"
+            id="namedview6"
+            showgrid="false"
+            inkscape:zoom="0.35355339"
+            inkscape:cx="-319.36898"
+            inkscape:cy="82.879903"
+            inkscape:window-x="-8"
+            inkscape:window-y="-8"
+            inkscape:window-maximized="1"
+            inkscape:current-layer="g845" />
+          <g
+            id="g845"
+            transform="translate(-3239.9062,1118.0527)">
+            <path
+              style="fill:#1d3557;stroke-width:1.00932813;fill-opacity:1"
+              d="m 3239.9062,-1118.0526 v 344.04881 h 683.7441 682.2559 v -89.98633 l -18.3711,-6.79492 c -54.8337,-20.28206 -155.3356,-59.88958 -216.248,-85.22266 -41.4268,-17.22919 -68.3196,-28.87992 -118.2579,-51.2305 -73.8652,-33.0597 -97.717,-42.8571 -132.5605,-54.4472 -49.8106,-16.5688 -87.6294,-22.9893 -129.0019,-21.9004 -41.5809,1.0943 -73.2271,9.5082 -114.75,30.5039 -25.6682,12.9788 -44.7072,24.6849 -99.42,61.1328 -65.4015,43.56863 -79.8234,52.45757 -107.8847,66.49804 -53.322,26.6796 -93.6968,33.61171 -138.8946,23.84766 -55.5427,-11.99893 -114.7504,-47.66761 -185.2129,-111.5801 -7.4944,-6.7975 -35.541,-34.4491 -62.3261,-61.4492 z"
+              id="path828"
+              inkscape:connector-curvature="0" />
+          </g>
+        </svg>
+      </div>
+      <h2 class="bold dark-blue text-right pt-5">Riwayat Kontak</h2>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="p-4 riwayat-container">
+            <p class="font-22 dark-blue">02 November 2020</p>
+            <div class="row mt-3">
+              <div class="col-1">
+                <img src="assets/images/phone.png" width="25" class="mr-2 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+              </div>
+              <div class="col-11">
+                <p class="font-22 dark-blue">6c:5f:1c:32:bf:36<span class="float-right">10.00 - 12.00</span></p>
+                <p class="font-22 dark-blue">Royal Plaza</p>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-1">
+                <img src="assets/images/phone.png" width="25" class="mr-2 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+              </div>
+              <div class="col-11">
+                <p class="font-22 dark-blue">6c:5f:1c:32:bf:36<span class="float-right">10.00 - 12.00</span></p>
+                <p class="font-22 dark-blue">Royal Plaza</p>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-1">
+                <img src="assets/images/phone.png" width="25" class="mr-2 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+              </div>
+              <div class="col-11">
+                <p class="font-22 dark-blue">6c:5f:1c:32:bf:36<span class="float-right">10.00 - 12.00</span></p>
+                <p class="font-22 dark-blue">Royal Plaza</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <input type="date" class="input-date float-right" name="" id="">
+          <img src="assets/images/kontak.png" class="pt-5 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+      </div>
+    </div>
+    <div id="tips">
+      <h2 class="bold white text-center pt-5">Tips</h2>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div id="accordionExample" class="accordion">
+            <div class="card border-0 accordion-rounded">
+                <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-link text-dark font-weight-bold collapsible-link accordion-1">
+                    <div id="headingOne" class="card-header border-0 bg-accordion-1" style="color: white !important;">
+                      <h1 class="h-accordion bold white mb-0 text-left font-18">
+                          Kapan saya harus memeriksakan diri? <span class="float-right">❯</span>
+                      </h1>
+                    </div>
+                  </a>
+                <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show" style="background-color: #FCF8F0;">
+                    <div class="card-body p-2rem">
+                      <p class="dark-blue">Apabila Anda dihubungi oleh petugas kesehatan, berarti Anda punya riwayat kontak 
+                        dengan penderita COVID-19 positif, PDP, atau ODP. Maka silakan periksakan diri Anda.
+                      </p>
+                      <p class="dark-blue">Selain itu, sesuai dengan prosedur yang sudah ditetapkan oleh pihak berwenang atau 
+                        pemerintah, Anda juga dapat menghubungi 119 ext. 9 atau periksa ke Rumah Sakit rujukan jika:
+                      </p>
+                      <p class="dark-blue">
+                        <ol>
+                          <li>Pernah berkunjung ke daerah endemis COVID-19 dalam 14 hari terakhir dan mengalami gejala 
+                            seperti demam di atas 38°C, batuk, dan sesak nafas yang tidak kunjung membaik.
+                          </li>
+                          <li>Pernah kontak langsung dengan pasien COVID-19 atau punya riwayat perjalanan ke daerah episentrum 
+                            penyebaran virus, meski tak menunjukkan gejala, namun bisa saja Anda menjadi carrier coronavirus.
+                          </li>
+                          <li>Mengalami gejala ringan-sedang yang mengarah ke COVID-19 diantaranya adalah demam, batuk, sesak 
+                            napas yang tak kunjung reda, meski dirasa tidak ada riwayat kontak langsung dengan pasien atau 
+                            berada di daerah episentrum.
+                          </li>
+                        </ol>
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 accordion-rounded">
+                <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="btn btn-link text-dark font-weight-bold collapsible-link accordion-2">
+                    <div id="headingTwo" class="card-header border-0 bg-accordion-2" style="color: white !important;">
+                      <h1 class="h-accordion bold white mb-0 text-left font-18">
+                        Bagaimana cara mencegah penyebaran COVID 19 ? <span class="float-right">❯</span>
+                      </h1>
+                    </div>
+                </a>
+                <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse" style="background-color: #FCF8F0;">
+                    <div class="card-body p-2rem">
+                      <p class="dark-blue">Beberapa cara yang bisa dilakukan untuk mencegah penularan virus ini adalah:</p>
+                      <p class="dark-blue">
+                        <ol>
+                          <li>Menjaga kesehatan dan kebugaran agar stamina tubuh tetap prima dan sistem imunitas / kekebalan tubuh meningkat.</li>
+                          <li>Mencuci tangan dengan benar secara teratur menggunakan air dan sabun atau hand-rub berbasis alkohol. Mencuci tangan sampai bersih selain dapat membunuh virus yang mungkin ada di tangan kita, tindakan ini juga merupakan salah satu tindakan yang mudah dan murah. Sekitar 98% penyebaran penyakit bersumber dari tangan. Karena itu, menjaga kebersihan tangan adalah hal yang sangat penting.</li>
+                          <li>Jaga jarak setidaknya 1 meter dengan orang lain. Jika anda terlalu dekat, anda dapat menghirup droplet dari orang yang mungkin menderita COVID-19.</li>
+                          <li>Ketika batuk dan bersin, tutup hidung dan mulut Anda dengan tisu atau lengan atas bagian dalam (bukan dengan telapak tangan).</li>
+                          <li>Hindari menyentuh mata, hidung dan mulut (segitiga wajah). Tangan menyentuh banyak hal yang dapat terkontaminasi virus. Jika kita menyentuh mata, hidung dan mulut dengan tangan yang terkontaminasi, maka virus dapat dengan mudah masuk ke tubuh kita.</li>
+                          <li>Gunakan masker dengan benar hingga menutupi mulut dan hidung ketika Anda sakit atau saat sedang keluar rumah.</li>
+                          <li>Buang tisu dan masker yang sudah digunakan ke tempat sampah dengan benar, lalu cucilah tangan Anda.</li>
+                          <li>Tetap dirumah,  hindari kontak dengan orang lain dan bepergian ke tempat umum.</li>
+                          <li>Hindari bepergian ke luar rumah saat Anda merasa kurang sehat, terutama jika Anda merasa demam, batuk dan sulit bernapas. Segera hubungi petugas kesehatan terdekat, dan mintalah bantuan mereka. Sampaikan pada petugas jika dalam 14 hari sebelumnya Anda pernah melakukan perjalanan terutama ke negara atau wilayah terjangkit, atau pernah kontak erat dengan orang yang memiliki gejala yang sama. Ikuti arahan dari petugas kesehatan setempat.</li>
+                          <li>Menunda perjalanan ke wilayah/ negara dimana virus ini ditemukan.</li>
+                          <li>Selalu pantau perkembangan penyakit COVID-19 dari sumber resmi dan akurat. Ikuti arahan dan informasi dari petugas kesehatan dan Dinas Kesehatan setempat. Informasi dari sumber yang tepat dapat membantu Anda melindungi dari Anda dari penularan dan penyebaran penyakit ini.</li>
+                        </ol>
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 accordion-rounded">
+              <a data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="btn btn-link text-dark font-weight-bold collapsible-link accordion-1">
+                  <div id="headingThree" class="card-header border-0 bg-accordion-1" style="color: white !important;">
+                    <h1 class="h-accordion bold white mb-0 text-left font-18">
+                        Jaga Jarak itu Penting! <span class="float-right">❯</span>
+                    </h1>
+                  </div>
+                </a>
+              <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse" style="background-color: #FCF8F0;">
+                  <div class="card-body p-2rem">
+                    <p class="dark-blue">Bila penyebaran virus terjadi di lokasi tertentu, tindakan mengurangi kontak antarwarga pertama-tama dilakukan di lokasi-lokasi tersebut dan tidak langsung di tingkat nasional.</p>
+                    <p class="dark-blue">Caranya adalah dengan melakukan hal-hal sebagai berikut:</p>
+                    <p class="dark-blue">
+                      <ol>
+                        <li>Hindari pertemuan besar (lebih dari 10 orang).</li>
+                        <li>Jangan pergi ke sarana kesehatan kecuali diperlukan. Bila Anda memiliki anggota keluarga atau kawan dirawat di rumah sakit, batasi pengunjung – terutama bila mereka anak-anak atau kelompok risiko tinggi (lanjut usia dan orang dengan penyakit yang dapat memperberat, misalnya gangguan jantung, diabetes dan penyakit kronis lainnya).</li>
+                        <li>Orang berisiko tinggi sebaiknya tetap di rumah dan menghindari pertemuan atau kegiatan lain yang dapat membuatnya terpapar virus, termasuk melakukan perjalanan.</li>
+                        <li>Beri dukungan pada anggota keluarga (yang tidak tinggal di rumah Anda) ataupun tetangga yang terinfeksi tanpa harus bertemu langsung, misalnya melalui telepon ataupun WA.</li>
+                        <li>Ikuti panduan resmi di wilayah Anda yang bisa saja merubah rutinitas termasuk kegiatan sekolah atau pekerjaan.</li>
+                        <li>Ikuti perkembangan informasi karena situasi dapat berubah dengan cepat sesuai perkembangan penyakit dan penyebarannya.</li>
+                        <li>Ingat bahwa bila setiap orang melakukan apa yang harus dilakukan, kita semua dapat melalui ini semua dan kembali ke kehidupan normal.</li>
+                        <li>Jika Anda mengalami gejala-gejala infeksi virus corona (COVID-19) Ambil tindakan!</li>
+                      </ol>
+                    </p>
+                  </div>
+              </div>
+            </div>
+            <div class="card border-0 accordion-rounded">
+                <a data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="btn btn-link text-dark font-weight-bold collapsible-link accordion-2">
+                    <div id="headingFour" class="card-header border-0 bg-accordion-2" style="color: white !important;">
+                      <h1 class="h-accordion bold white mb-0 text-left font-18">
+                        Cara tepat menggunakan masker <span class="float-right">❯</span>
+                      </h1>
+                    </div>
+                </a>
+                <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse" style="background-color: #FCF8F0;">
+                    <div class="card-body p-2rem">
+                      <p class="dark-blue">
+                        <ol>
+                          <li>Sebelum memasang masker, cuci tangan pakai sabun dan air mengalir (minimal 20 detik) atau bila tidak tersedia, gunakan cairan pembersih tangan (minimal alkohol 60%).</li>
+                          <li>Pasang masker untuk menutupi mulut dan hidung dan pastikan tidak ada sela antara wajah dan masker.</li>
+                          <li>Hindari menyentuh masker saat digunakan; bila tersentuh, cuci tangan pakai sabun dan air mengalir minimal 20 detik atau bila tidak ada, cairan pembersih tangan (minimal alkohol 60%).</li>
+                          <li>Ganti masker yang basah atau lembab dengan masker baru. Masker medis hanya boleh digunakan satu kali saja. Masker kain dapat digunakan berulang kali.</li>
+                          <li>Untuk membuka masker: lepaskan dari belakang. Jangan sentuh bagian depan masker; Untuk masker 1x pakai, buang segera di tempat sampah tertutup atau kantong plastik. Untuk masker kain, segera cuci dengan deterjen. Untuk memasang masker baru, ikuti poin pertama.</li>
+                        </ol>
+                      </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark-blue py-4">
+      <p class="mb-0 bold white text-center font-20">Copyright © 2020 UnThinkable</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

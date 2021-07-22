@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+*{
+    font-family: 'Cairo', sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    font-weight: bold;
+    z-index: 9999;
+}
+
+.nav-link{
+    color: rgba(255,255,255,1) !important;
+    font-size: 20px;
+}
+
+.navbar-fixed-top.scrolled {
+    background-color: #1D3658 !important;
+    transition: background-color 200ms linear;
+}
+
+.dark-blue{
+    color: #1D3658 !important;
+}
+
+.red{
+    color: #E63946 !important;
+}
+
+.bg-dark-blue{
+    background-color: #1D3658 !important;
+}
+
+.bg-green{
+    background-color: #1ABC9C !important;
+}
+
+.bg-transparent{
+    background-color: transparent !important;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.medium{
+    font-weight: 600;
+}
+
+.white{
+    color: white !important;
+}
+
+.font-12{
+    font-size: 12px;
+}
+
+.font-14{
+    font-size: 14px;
+}
+
+.font-16{
+    font-size: 16px;
+}
+
+.font-18{
+    font-size: 18px;
+}
+
+.font-20{
+    font-size: 20px;
+}
+
+.font-22{
+    font-size: 22px;
+}
+
+.font-24{
+    font-size: 24px;
+}
+
+.btn-daftar{
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-daftar:hover{
+    color: #1D3658;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-masuk{
+    color: white;
+    background-color: #457B9D;
+    border: 2px solid #457B9D;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-masuk:hover{
+    color: white;
+    background-color: #1ABC9C;
+    border: 2px solid #1ABC9C;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-selengkapnya{
+    color: white;
+    background-color: #E63946;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-selengkapnya:hover{
+    color: white;
+    background-color: #D11A29;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#home{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    width: 100%;
+    background-color: #F1FAEE;
+}
+
+.header-content{
+    padding-top: 128px;
+}
+
+.header-content .row{
+    padding-top: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#status{
+    position: relative;
+    margin: 0;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-color: #F1FAEE;
+    background-size: cover;
+    width: 100%;
+}
+
+.lokasi{
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+#mapid {
+    height: 270px;
+}
+
+.lokasi-container{
+    border-radius: 10px;
+}
+
+.lh-2{
+    line-height: 2;
+}
+
+#info{
+    position: relative;
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-color: #F1FAEE;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.tabs {
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.tabs li {
+    float: right;
+    display: block;
+}
+
+.tabs input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+
+.tabs label {
+    display: block;
+    padding: 14px 21px;
+    border-radius: 2px 2px 0 0;
+    font-size: 18px;
+    background: #EDEDED;
+    font-weight: bold;
+    color: #878C94;
+    cursor: pointer;
+    position: relative;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.tabs label:hover {
+    background: #D4D4D4;
+}
+
+.tabs .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 25px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    color: #1D3658;
+    background: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.tabs [id^="tab"]:checked + label {
+    top: 0;
+    padding-top: 17px;
+    background: white;
+    color: #1D3658;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+  
+.tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+}
+
+.content-tab{
+    border-bottom: 1px solid #585959;
+}
+
+#riwayat{
+    position: relative;
+    margin: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-size: cover;
+    width: 100%;
+    background-color: #A8DADC;
+}
+
+.input-date{
+    border: none;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+}
+
+.riwayat-container{
+    background-color: white;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.royal-1{
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    background: url('../images/royal-1.png');
+    background-size: cover;
+}
+
+.royal-2{
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    background: url('../images/royal-2.png');
+    background-size: cover;
+}
+
+#kontak{
+    position: relative;
+    margin: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-size: cover;
+    width: 100%;
+    background-color: #A8DADC;
+}
+
+#tips{
+    position: relative;
+    margin: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-size: cover;
+    width: 100%;
+    background-color: #1D3557;
+}
+
+.accordion-1, .accordion-1:hover{
+    background-color: #53A2B5;
+    border-radius: 0;
+    text-decoration: none;
+}
+
+.bg-accordion-1{
+    background-color: #53A2B5;
+}
+
+.accordion-2, .accordion-2:hover{
+    background-color: #A8DADC;
+    border-radius: 0;
+    text-decoration: none;
+}
+
+.bg-accordion-2{
+    background-color: #A8DADC;
+}
+
+.accordion .card a[aria-expanded="false"] .card-header .h-accordion span{
+    transform: rotate(90deg);
+    transition: all 0.3s;
+}
+
+.accordion .card a[aria-expanded="true"] .card-header .h-accordion span{
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+}
+
+.accordion-rounded{
+    border-radius: 10px;
+}
+
+.p-2rem{
+    padding: 2rem;
+}
+
+@media (max-width: 767.98px) {
+    #home{
+        overflow: hidden;
+    }
+
+    #home svg{
+        width: 500% !important;
+    }
+
+    .header-content .col-md-4{
+        margin-top: 2rem;
+    }
+
+    #status p .badge{
+        margin-left: 0 !important;
+    }
+
+    .lokasi-container{
+        margin-left: 0 !important;
+        margin-top: 2rem;
+    }
+
+    #riwayat{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    #riwayat h2{
+        text-align: center !important;
+        margin-bottom: 2rem;
+    }
+
+    #riwayat .row .col-md-4{
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #kontak{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    #kontak .row .col-md-5{
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
+        text-align: center !important;
+    }
+
+    #kontak .row .col-md-5 input{
+        float: none !important;
+        margin-top: 2rem;
+    }
+
+    #kontak h2{
+        text-align: center !important;
+        margin-bottom: 2rem;
+    }
+
+    #info{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    #info h2{
+        text-align: center !important;
+    }
+
+    #tips{
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    #tips h2{
+        margin-bottom: 2rem;
+    }
+
+    #status{
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    .header-content .row{
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    .navbar{
+        background-color: #1D3658 !important;
+    }
+
+    .tabs label{
+        padding: 14px 15px;
+    }
+}
